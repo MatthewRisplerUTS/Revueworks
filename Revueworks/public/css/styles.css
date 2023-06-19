@@ -1,0 +1,103 @@
+/* Reset some default styles in the browser */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the font for the entire page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Common font similar to what Microsoft uses */
+    color: #333;
+    background-color: white;
+    line-height: 1.6;
+}
+
+/* Container for the entire content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Rating stars */
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    unicode-bidi: bidi-override;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    display: inline-block;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: orange;
+}
+
+/* Feedback form */
+.feedback-form {
+    margin: 40px 0;
+}
+
+/* Feedback textarea */
+.feedback-textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    resize: vertical;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid orange;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .star-rating label {
+        font-size: 1.5em;
+    }
+}

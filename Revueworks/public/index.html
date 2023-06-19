@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Review Service</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Leave a Review</h1>
+        </header>
+
+        <section class="rating-section">
+            <h2>Rate Our Service</h2>
+            <div class="stars">
+                <!-- Stars for rating -->
+            </div>
+            <button onclick="handleRating()">Submit Rating</button>
+        </section>
+
+        <section class="feedback-form" style="display: none;">
+            <h2>Tell Us How We Can Improve</h2>
+            <form onsubmit="handleFeedbackForm(event)">
+                <textarea placeholder="Your feedback"></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+        <div class="loading-spinner" style="display: none;">
+            <!-- Loading spinner animation -->
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
